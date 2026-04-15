@@ -14,7 +14,7 @@
         <img src="{{ asset('images/fotomuskiz.jpg') }}" 
              class="w-full h-full object-cover filter opacity-30 scale-110">
     </div>
-    <div class="flex flex-col md:flex-row gap-20 h-full items-center">
+    <div class="flex flex-col md:flex-row gap-20     h-full items-center">
         
         <div class="flex-1 bg-blue-300 p-8 rounded-3xl shadow-2xl min-h-[500px] w-[1000px] flex items-center">
             <div class="w-full h-[400px] rounded-2xl overflow-hidden my-auto">
