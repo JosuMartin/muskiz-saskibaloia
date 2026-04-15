@@ -3,7 +3,12 @@
 @section('title', 'Muskiz Saskibaloia')
 
 @section('content')
-
+<script>
+    document.body.style.overflow = 'hidden';
+    window.onbeforeunload = function() {
+        document.body.style.overflow = 'auto';
+    };
+</script>
 <main class="min-h-[70vh] p-10 max-w-[1200px] mx-auto overscroll-y-none flex-col items-center justify-center">    
     <div class="absolute inset-0 -z-10">
         <img src="{{ asset('images/fotomuskiz.jpg') }}" 
