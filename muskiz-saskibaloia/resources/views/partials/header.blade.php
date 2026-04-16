@@ -8,6 +8,7 @@
         <nav>
             <ul class="flex items-center gap-6 list-none m-0 p-0 text-black font-bold">
                 <li><a href="/" class="hover:text-white hover:bg-[#1e90ff] px-3 py-2 rounded-md transition-all">Inicio</a></li>
+                <li><a href="/noticias" class="hover:text-white hover:bg-[#1e90ff] px-3 py-2 rounded-md transition-all">Noticias</a></li>
                 <li><a href="/tienda" class="hover:text-white hover:bg-[#1e90ff] px-3 py-2 rounded-md transition-all">Tienda</a></li>
                 <li><a href="/contacto" class="hover:text-white hover:bg-[#1e90ff] px-3 py-2 rounded-md transition-all">Contacto</a></li>
                 <li><a href="/partidos" class="hover:text-white hover:bg-[#1e90ff] px-3 py-2 rounded-md transition-all">Partidos</a></li>

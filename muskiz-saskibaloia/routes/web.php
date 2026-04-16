@@ -15,5 +15,8 @@ Route::get('/tienda', function () {
     return view('tienda');
 });
 
+Route::get('/noticias', function () {
+    return view('noticias');
+});
 
 Route::get('/partidos', [PartidoController::class, 'index'])->name('partidos.index');

@@ -14,13 +14,13 @@
         <img src="{{ asset('images/fotomuskiz.jpg') }}" 
              class="w-full h-full object-cover filter opacity-30 scale-110">
     </div>
-        <h1 class="text-3xl font-bold mb-6 text-center text-blue-900">Muskiz Saskibaloia</h1>
+        <h1 class="animate-vibrar text-3xl font-bold mb-6 text-center text-blue-900">Muskiz Saskibaloia</h1>
         
         <div class="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm mb-11">
             <p class="text-lg text-gray-800 leading-relaxed text-center">
                 Muskiz Saskibaloia, club creado el año 1991 y que después de una 
                 temporada de inactividad es retomado por Oier Alonso, Josu Martin Valdivielso y Eneko Perez Moar 
-                como nueva directiva vuelve a las canchas el año 2023. <strong>¡Aupa Muskiz!</strong>
+                como nueva directiva y vuelve a las canchas el año 2023. <strong>¡Aupa Muskiz!</strong>
             </p>
         </div>
         
