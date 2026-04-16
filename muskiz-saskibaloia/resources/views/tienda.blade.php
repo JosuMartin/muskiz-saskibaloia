@@ -26,7 +26,7 @@
     <div class="flex-1 bg-blue-300 p-8 rounded-3xl shadow-2xl min-h-[20px] mt-20">
         <h3 class="text-xl font-bold mt-1 mb-3 flex justify-center">¿Estas interesado?</h3>
         <p class="text-center mb-1">¡Si estas interesado en cualquiera de nuestras prendas disponibles contacta con nosotros a traves de nuestro correo electronico!</p>
-            <div class="flex justify-center items-center gap-5 mb-10">
+            <div class="flex justify-center items-center gap-5">
             <img src="{{ asset('images/Gmail_icon.png') }}" alt="Logo" class="h-9 w-auto">
             <p>muskizsaskibaloiaberria@gmail.com</p>
             </div>
