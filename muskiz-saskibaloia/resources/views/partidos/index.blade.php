@@ -32,7 +32,7 @@ function videoCarousel() {
 
 <main class="min-h-[70vh] p-10 max-w-[1200px] mx-auto">
 <div class="absolute inset-0 -z-10">
-    <img src="{{ asset('images/fotomuskiz.jpg') }}" class="w-full h-full object-cover filter opacity-30 scale-110">
+    <img src="{{ asset('images/fotomuskiz.webp') }}" class="w-full h-full object-cover filter opacity-30 scale-110">
 </div>
 
 <div class="flex flex-row justify-center gap-[200px] mt-[50px]">
@@ -68,7 +68,7 @@ function videoCarousel() {
     </div>
     <p>Este contenido y mucho mas en nuesto Instagram!</p>
     <a href="https://www.instagram.com/muskizsaskibaloia/" target="_blank" class="flex items-center gap-2 hover:opacity-75 transition-all mb-3">
-                    <img src="{{ asset('images/Instagram_icon.png') }}" alt="Instagram" class="h-8 w-auto">
+                    <img src="{{ asset('images/Instagram_icon.webp') }}" alt="Instagram" class="h-8 w-auto">
                     <p class="text-sm font-semibold text-blue-900">muskizsaskibaloia</p>
                 </a>    
     </div>

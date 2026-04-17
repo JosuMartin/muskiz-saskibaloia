@@ -3,7 +3,7 @@
         
         <div class="flex items-center px-8 py-4">
             <a href="/" class="block">
-                <img src="{{ asset('images/muskiz.png') }}" alt="Logo" class="h-24 w-auto">
+                <img src="{{ asset('images/muskiz.webp') }}" alt="Logo" class="h-24 w-auto">
             </a>
         </div>
 

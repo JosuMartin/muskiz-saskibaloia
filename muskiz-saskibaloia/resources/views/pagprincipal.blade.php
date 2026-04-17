@@ -11,7 +11,7 @@
 </script>
 <main class="min-h-[70vh] p-10 max-w-[1200px] mx-auto overscroll-y-none flex-col items-center justify-center">    
     <div class="absolute inset-0 -z-10">
-        <img src="{{ asset('images/fotomuskiz.jpg') }}" 
+        <img src="{{ asset('images/fotomuskiz.webp') }}" 
              class="w-full h-full object-cover filter opacity-30 scale-110">
     </div>
         <h1 class="animate-vibrar text-3xl font-bold mb-6 text-center text-blue-900">Muskiz Saskibaloia</h1>
@@ -29,15 +29,15 @@
     <div class="relative h-56 overflow-hidden rounded-base md:h-96">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ asset('images/image1.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="{{ asset('images/image1.webp') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ asset('images/image2.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="{{ asset('images/image2.webp') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
          <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ asset('images/fotomuskiz.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="{{ asset('images/fotomuskiz.webp') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
     <!-- Slider indicators -->
