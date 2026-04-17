@@ -23,7 +23,7 @@
             <img src="{{ asset('images/ropa3.jpg') }}" class="h-50 max-w-80">
     </div>
 
-    <div class="animate-vibrar flex-1 bg-blue-300 p-8 rounded-3xl shadow-2xl min-h-[20px] mt-20">
+    <div class="animate-vibrar flex-1 bg-[#1e90ff]/50 backdrop-blur-md p-6 rounded-xl shadow-sm min-h-[20px] mt-20">
         <h3 class="text-xl font-bold mt-1 mb-3 flex justify-center">¿Estas interesado?</h3>
         <p class="text-center mb-1">¡Si estas interesado en cualquiera de nuestras prendas disponibles contacta con nosotros a traves de nuestro correo electronico!</p>
             <div class="flex justify-center items-center gap-5">

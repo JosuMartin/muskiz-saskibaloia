@@ -16,7 +16,7 @@
     </div>
         <h1 class="animate-vibrar text-3xl font-bold mb-6 text-center text-blue-900">Muskiz Saskibaloia</h1>
         
-        <div class="bg-white/60 backdrop-blur-md p-6 rounded-xl shadow-sm mb-11">
+        <div class="bg-[#1e90ff]/50 backdrop-blur-md p-6 rounded-xl shadow-sm mb-11">
             <p class="text-lg text-gray-800 leading-relaxed text-center">
                 Muskiz Saskibaloia, club creado el año 1991 y que después de una 
                 temporada de inactividad es retomado por Oier Alonso, Josu Martin Valdivielso y Eneko Perez Moar 

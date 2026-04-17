@@ -7,11 +7,13 @@
 function videoCarousel() {
     return {
         currentIndex: 0,
+        // SUSTITUYE "ID_VIDEO_X" por el código que sale en la URL de tu vídeo de YouTube
+        // Ejemplo: si el vídeo es https://www.youtube.com/watch?v=dQw4w9WgXcQ, el ID es dQw4w9WgXcQ
         videos: [
-            "https://drive.google.com/file/d/1Xm8a-BPXRmT80JYjq1I6li9_eApESgut/preview",
-            "https://drive.google.com/file/d/1izgy6SnIX1gXC7nArD0rnl1wqA6AgAMd/preview",
-            "https://drive.google.com/file/d/1ySbRbbCKiuWMB5OMcVOC3KwNXyPh63jN/preview"
-        ],
+            "https://www.youtube.com/embed/cPnsMb9AYLI?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1",  
+            "https://www.youtube.com/embed/Ke7YfYDL7uw?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1",
+            "https://www.youtube.com/embed/ZPvQX9VWEhc?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1"    
+            ],
         nextIndex() {
             this.currentIndex = (this.currentIndex + 1) % this.videos.length;
         },
@@ -35,7 +37,9 @@ function videoCarousel() {
 
 <div class="flex flex-row justify-center gap-[200px] mt-[50px]">
 
- <div class="min-h-[500px] min-w-[400px] relative overflow-hidden rounded-xl bg-black group" x-data="videoCarousel()">
+<div class="flex flex-col gap-3 items-center bg-[#1e90ff]/50 backdrop-blur-md rounded-xl shadow-sm -mb-3">
+
+<div class="min-h-[500px] min-w-[400px] relative overflow-hidden rounded-t-xl bg-black group" x-data="videoCarousel()">
     <template x-for="(video, index) in videos" :key="index">
         <div x-show="currentIndex === index" 
              x-transition:enter="transition ease-out duration-500"
@@ -45,21 +49,29 @@ function videoCarousel() {
             
             <iframe :src="video" 
                     class="h-full scale-150 transform -translate-x-1/2 left-1/2 absolute"
-                    style="width: 200%;" 
+                    style="width: 200%; pointer-events: none;" 
                     allow="autoplay" 
                     frameborder="0">
             </iframe>
+
+            <div class="absolute inset-0 z-10 bg-transparent"></div>
         </div>
     </template>
 
-    <button @click="prevIndex()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition z-20">
+    <button @click="prevIndex()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-[#1e90ff] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
     </button>
-    <button @click="nextIndex()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition z-20">
+    
+    <button @click="nextIndex()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-[#1e90ff] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
     </button>
-</div>
-
+    </div>
+    <p>Este contenido y mucho mas en nuesto Instagram!</p>
+    <a href="https://www.instagram.com/muskizsaskibaloia/" target="_blank" class="flex items-center gap-2 hover:opacity-75 transition-all mb-3">
+                    <img src="{{ asset('images/Instagram_icon.png') }}" alt="Instagram" class="h-8 w-auto">
+                    <p class="text-sm font-semibold text-blue-900">muskizsaskibaloia</p>
+                </a>    
+    </div>
     <div>
     <table class="w-full border-collapse min-w-[600px]">
         <thead>
