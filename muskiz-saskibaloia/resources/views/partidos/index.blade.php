@@ -10,9 +10,9 @@ function videoCarousel() {
         // SUSTITUYE "ID_VIDEO_X" por el código que sale en la URL de tu vídeo de YouTube
         // Ejemplo: si el vídeo es https://www.youtube.com/watch?v=dQw4w9WgXcQ, el ID es dQw4w9WgXcQ
         videos: [
+            "https://www.youtube.com/embed/ZPvQX9VWEhc?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1",
             "https://www.youtube.com/embed/cPnsMb9AYLI?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1",  
-            "https://www.youtube.com/embed/Ke7YfYDL7uw?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1",
-            "https://www.youtube.com/embed/ZPvQX9VWEhc?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1"    
+            "https://www.youtube.com/embed/Ke7YfYDL7uw?rel=0&modestbranding=1&controls=1&mute=1&autoplay=1"
             ],
         nextIndex() {
             this.currentIndex = (this.currentIndex + 1) % this.videos.length;
@@ -73,9 +73,9 @@ function videoCarousel() {
                 </a>    
     </div>
     <div>
-    <table class="w-full border-collapse min-w-[600px]">
+    <table class="w-full border-collapse min-w-[800px] bg-white rounded-2xl ">
         <thead>
-            <tr class="bg-gray-200">
+            <tr class="bg-[#1e90ff]">
                 <th class="p-3 text-left">Fecha</th>
                 <th class="p-3 text-left">Ubicación</th>
                 <th class="p-3 text-left">Rival</th>
