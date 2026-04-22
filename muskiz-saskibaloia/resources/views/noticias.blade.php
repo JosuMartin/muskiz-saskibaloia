@@ -4,10 +4,20 @@
 
 @section('content')
 <script>
-    document.body.style.overflow = 'hidden';
-    window.onbeforeunload = function() {
-        document.body.style.overflow = 'auto';
-    };
+    window.addEventListener('scroll', function() {
+        const footer = document.getElementById('main-footer');
+        if (!footer) return;
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const threshold = document.body.offsetHeight - 50;
+
+        if (scrollPosition >= threshold) {
+            footer.classList.remove('opacity-0', 'translate-y-full', 'pointer-events-none');
+            footer.classList.add('opacity-100', 'translate-y-0');
+        } else {
+            footer.classList.add('opacity-0', 'translate-y-full', 'pointer-events-none');
+            footer.classList.remove('opacity-100', 'translate-y-0');
+        }
+    });
 </script>
 <main class="min-h-[70vh] p-10 max-w-[1200px] mx-auto overscroll-y-none flex-col items-center justify-center">    
      <div class="absolute inset-0 -z-10">
@@ -31,4 +41,6 @@
 
     </div>
 </main>
+<div class="h-80"></div>
+
 @endsection

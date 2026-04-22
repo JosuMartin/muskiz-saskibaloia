@@ -1,52 +1,64 @@
-<header class="w-full bg-gradient-to-b from-white to-[#1e90ff] border-b border-blue-200">
-    <div class="max-w-full mx-auto flex flex-col sm:flex-row items-stretch justify-between h-32">
-        
-        <div class="flex items-center px-8 py-4">
-            <a href="/" class="block">
-                <img src="{{ asset('images/muskiz.webp') }}" alt="Logo" class="h-24 w-auto">
-            </a>
+<header class="w-full sticky top-0 z-50 shadow-md">
+    <div class="w-full bg-blue-900 h-12 flex items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-xs md:text-sm text-blue-100 font-medium tracking-wider">
+                WEB OFICIAL DEL CLUB DEPORTIVO MUSKIZ SASKIBALOIA
+            </h1>
+            
+            <div class="flex gap-6 items-center">
+                <a href="mailto:..." class="flex items-center gap-2 text-white hover:text-blue-200 transition-colors">
+                    <img src="{{ asset('images/Gmail_icon.webp') }}" alt="Gmail" class="h-4 w-auto">
+                    <span class="text-xs hidden md:block">muskizsaskibaloiaberria@gmail.com</span>
+                </a>
+                <a href="https://instagram.com/..." target="_blank" class="flex items-center gap-2 text-white hover:text-blue-200 transition-colors">
+                    <img src="{{ asset('images/Instagram_icon.webp') }}" alt="Instagram" class="h-5 w-auto">
+                    <span class="text-xs hidden md:block">@muskizsaskibaloia</span>
+                </a>
+            </div>
         </div>
+    </div>
 
-        <nav class="flex flex-1">
-            <ul class="flex flex-1 items-stretch list-none m-0 p-0 text-black font-bold">
-                
-                <li class="flex flex-1">
-                    <a href="/" class="group relative flex flex-1 items-center justify-center text-2xl transition-all duration-300 
-                        {{ request()->is('/') ? 'bg-[#1a75cf] text-white' : 'text-blue-900 hover:bg-[#1e90ff] hover:text-white' }}">
-                        Inicio
-                        <span class="absolute bottom-2 left-1/2 h-1 bg-white transition-all duration-300 -translate-x-1/2 
-                            {{ request()->is('/') ? 'w-1/2' : 'w-0 group-hover:w-1/2' }}"></span>
-                    </a>
-                </li>
+    <div class="w-full bg-gradient-to-b from-white to-gray-100 border-b border-blue-200">
+        <div class="container mx-auto px-6 flex items-center justify-between h-24">
+            
+            <div class="flex-shrink-0">
+                <a href="/" class="transition-transform hover:scale-105 block">
+                    <img src="{{ asset('images/muskiz.webp') }}" alt="Logo" class="h-16 md:h-20 w-auto">
+                </a>
+            </div>
 
-                <li class="flex flex-1">
-                    <a href="/noticias" class="group relative flex flex-1 items-center justify-center text-2xl transition-all duration-300 
-                        {{ request()->is('noticias*') ? 'bg-[#1a75cf] text-white' : 'text-blue-900 hover:bg-[#1e90ff] hover:text-white' }}">
-                        Noticias
-                        <span class="absolute bottom-2 left-1/2 h-1 bg-white transition-all duration-300 -translate-x-1/2 
-                            {{ request()->is('noticias*') ? 'w-1/2' : 'w-0 group-hover:w-1/2' }}"></span>
-                    </a>
-                </li>
+            <nav class="hidden md:flex h-full">
+                <ul class="flex items-stretch gap-8 font-bold group/nav h-full">
+                    @php
+                        $links = [
+                            ['name' => 'Inicio', 'url' => '/', 'active' => request()->is('/')],
+                            ['name' => 'Tienda', 'url' => '/tienda', 'active' => request()->is('tienda*')],
+                            ['name' => 'Partidos', 'url' => '/partidos', 'active' => request()->is('partidos*')],
+                            ['name' => 'Contacto', 'url' => '/contacto', 'active' => request()->is('contacto*')],
 
-                <li class="flex flex-1">
-                    <a href="/tienda" class="group relative flex flex-1 items-center justify-center text-2xl transition-all duration-300 
-                        {{ request()->is('tienda*') ? 'bg-[#1a75cf] text-white' : 'text-blue-900 hover:bg-[#1e90ff] hover:text-white' }}">
-                        Tienda
-                        <span class="absolute bottom-2 left-1/2 h-1 bg-white transition-all duration-300 -translate-x-1/2 
-                            {{ request()->is('tienda*') ? 'w-1/2' : 'w-0 group-hover:w-1/2' }}"></span>
-                    </a>
-                </li>
+                        ];
+                    @endphp
 
-                <li class="flex flex-1">
-                    <a href="/partidos" class="group relative flex flex-1 items-center justify-center text-2xl transition-all duration-300 
-                        {{ request()->is('partidos*') ? 'bg-[#1a75cf] text-white' : 'text-blue-900 hover:bg-[#1e90ff] hover:text-white' }}">
-                        Partidos
-                        <span class="absolute bottom-2 left-1/2 h-1 bg-white transition-all duration-300 -translate-x-1/2 
-                            {{ request()->is('partidos*') ? 'w-1/2' : 'w-0 group-hover:w-1/2' }}"></span>
-                    </a>
-                </li>
+                    @foreach($links as $link)
+                        <li class="relative flex items-center group">
+                            <a href="{{ $link['url'] }}" 
+                               class="text-xl transition-all duration-300 py-2
+                               {{ $link['active'] 
+                                  ? 'text-blue-900 group-hover/nav:text-gray-500 hover:!text-blue-900' 
+                                  : 'text-gray-500 hover:text-blue-900' }}">
+                                
+                                {{ $link['name'] }}
 
-            </ul>
-        </nav>
+                                <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-900 transform transition-transform duration-300
+                                    {{ $link['active'] 
+                                       ? 'scale-x-100 group-hover/nav:scale-x-0 group-hover:!scale-x-100' 
+                                       : 'scale-x-0 group-hover:scale-x-100' }}">
+                                </span>
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>

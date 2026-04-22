@@ -1,36 +1,63 @@
-<footer class="w-full bg-gradient-to-t bg-white px-8 mt-10 border-black border-t-2 bg-gradient-to-t from-white to-[#1e90ff]/40">
-    <div class="max-w-full mx-auto flex flex-row items-center justify-between h-20">
+<footer id="main-footer" 
+    class="fixed bottom-0 left-0 w-full bg-slate-50 border-t-4 border-blue-900 pt-10 pb-6 
+           opacity-0 translate-y-full pointer-events-none transition-all duration-700 ease-in-out z-50">
+    <div class="container mx-auto px-6">
         
-        <div class="flex items-center gap-2 -ml-5">
-            <a href="https://www.muskiz.org" target="_blank" class="hover:scale-105 transition-transform block">
-                <img src="{{ asset('images/udala.webp') }}" class="h-[90px] w-auto">
-            </a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+            
+            <div class="flex flex-col items-start">
+                <img src="{{ asset('images/muskiz.webp') }}" alt="Logo Muskiz" class="h-20 w-auto mb-4 grayscale hover:grayscale-0 transition-all">
+                <p class="text-sm text-gray-600 leading-relaxed font-medium tracking-wide">
+                    Fomentando el baloncesto en Muskiz desde la base. Pasión, esfuerzo y trabajo en equipo.
+                </p>
+            </div>
 
-            <a href="https://www.steelphalt.com" target="_blank" class="hover:scale-105 transition-transform block mr-2">
-                <img src="{{ asset('images/steelphalt.webp') }}" alt="Steelphalt" class="h-6 w-auto">
-            </a>
+            <div class="flex flex-col">
+                <h4 class="text-blue-900 font-bold uppercase mb-4 tracking-wider text-xl">Contacto</h4>
+                <div class="space-y-3">
+                    <a href="mailto:muskizsaskibaloiaberria@gmail.com" class="flex items-center gap-3 text-sm font-semibold text-gray-600 hover:text-blue-900 transition-colors">
+                        <img src="{{ asset('images/Gmail_icon.webp') }}" class="h-5 w-auto">
+                        muskizsaskibaloiaberria@gmail.com
+                    </a>
+                    <a href="https://instagram.com/muskizsaskibaloia" class="flex items-center gap-3 text-sm font-semibold text-gray-600 hover:text-blue-900 transition-colors">
+                        <img src="{{ asset('images/Instagram_icon.webp') }}" class="h-5 w-auto">
+                        @muskizsaskibaloia
+                    </a>
+                    <div class="flex items-start gap-3 text-sm font-semibold text-gray-600">
+                        <img src="{{ asset('images/ubi.webp') }}" class="h-5 w-auto mt-1">
+                        <span class="uppercase">29 bis, C. la Cendeja, 48550 Muskiz, Bizkaia</span>
+                    </div>
+                </div>
+            </div>
 
-            <a href="https://petronor.eus" target="_blank" class="hover:scale-105 transition-transform block">
-                <img src="{{ asset('images/petronor.webp') }}" alt="Petronor" class="h-6 w-auto">
-            </a>
+            <div class="flex flex-col">
+                <h4 class="text-blue-900 font-bold uppercase mb-4 tracking-wider text-xl">Colaboradores</h4>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="https://www.muskiz.org" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="{{ asset('images/udala.webp') }}" class="h-14 w-auto">
+                    </a>
+                    <a href="https://www.steelphalt.com" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="{{ asset('images/steelphalt.webp') }}" class="h-5 w-auto">
+                    </a>
+                    <a href="https://petronor.eus" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="{{ asset('images/petronor.webp') }}" class="h-5 w-auto">
+                    </a>
+                </div>
+            </div>
+
         </div>
 
-        <div class="flex flex-row gap-5 items-center -mr-5">
-            
-            <a href="mailto:muskizsaskibaloiaberria@gmail.com" class="flex items-center gap-2 hover:opacity-75 transition-all">
-                <img src="{{ asset('images/Gmail_icon.webp') }}" alt="Gmail" class="h-6 w-auto">
-                <p class="text-sm font-semibold text-blue-900">muskizsaskibaloiaberria@gmail.com</p>
-            </a>
-
-            <a href="https://www.instagram.com/muskizsaskibaloia/" target="_blank" class="flex items-center gap-2 hover:opacity-75 transition-all -mr-2">
-                <img src="{{ asset('images/Instagram_icon.webp') }}" alt="Instagram" class="h-8 w-auto">
-                <p class="text-sm font-semibold text-blue-900">muskizsaskibaloia</p>
-            </a>
-
-            <a href="https://goo.gl/maps/..." target="_blank" class="flex items-center gap-3 max-w-[220px] hover:opacity-75 transition-all">
-                <img src="{{ asset('images/ubi.webp') }}" alt="Ubi" class="h-8 w-auto shrink-0">
-                <span class="text-[11px] leading-tight font-semibold uppercase text-blue-900">29 bis, C. la Cendeja, 29, 48550 Muskiz, Vizcaya</span>
-            </a>
+        <div class="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-gray-500 uppercase tracking-widest font-medium">
+                © {{ date('Y') }} C.D. MUSKIZ SASKIBALOIA - Todos los derechos reservados.
+            </p>
+            <div class="flex gap-4 text-xs font-bold text-gray-400">
+                <a href="#" class="hover:text-blue-900 transition-colors">AVISO LEGAL</a>
+                <span>|</span>
+                <a href="#" class="hover:text-blue-900 transition-colors">PRIVACIDAD</a>
+                <span>|</span>
+                <p class="text-gray-400 font-bold">DISEÑO POR JOSU MARTÍN</p>
+            </div>
         </div>
     </div>
 </footer>
